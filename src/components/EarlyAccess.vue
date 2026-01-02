@@ -72,7 +72,7 @@
 
 import { ref } from 'vue';
 
-const emit = defineEmits<{'banner-message': [msg: string]}>()
+const emit = defineEmits<{'banner-message': [message: string, type: string]}>()
 
 const fullName = ref('');
 const emailAddress = ref('');
@@ -101,7 +101,7 @@ const handleSubmit = async () => {
         email: emailAddress.value 
       })
     })
-    emit('banner-message', "Thanks! We’ll be in touch soon.");
+    emit('banner-message', "Thanks! We’ll be in touch soon.", "success");
     fullName.value = ""
     emailAddress.value = ""
     form.value.reset()
