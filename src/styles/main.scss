@@ -1,0 +1,31 @@
+:root {
+  --primary-text-color: rgb(41, 48, 61);
+  --muted-text-color: rgb(113, 111, 126);
+}
+
+* {
+  font-family: 'IBM Plex Sans', sans-serif !important;
+  color: rgb(41, 48, 61);
+}
+
+body {
+  background-color: rgb(250, 248, 245)
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'IBM Plex Serif', serif !important;
+  margin-bottom: 1.5vh !important;
+  color: rgb(41, 48, 61);
+}
+
+code, pre {
+  font-family: 'IBM Plex Mono', monospace !important;
+  color: rgb(41, 48, 61);
+}
+p.small {
+  font-size: 0.9em;
+  color: var(--muted-text-color);
+}
+p.centered {
+  text-align: center;
+}
