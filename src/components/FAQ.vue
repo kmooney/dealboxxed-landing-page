@@ -1,3 +1,15 @@
+<script setup lang="ts">
+  import EarlyAccess from './EarlyAccess.vue';
+
+  const emit = defineEmits<{
+    'banner-message': [message: string, type: string]
+  }>()
+
+  const passthruEvent = (message:string, type: string) => { 
+    emit('banner-message', message, type);
+  }
+</script>
+
 <template>
   <div class="container">
     <div class="headline">
@@ -54,12 +66,14 @@
     <p class="a">If you like that, you should use it! I personally feel like I have 4 inboxes to clean out. So auto-archiving promotions works for me. Maybe it doesn’t work for you. That’s okay. It’s okay for us to be different people with different preferences.</p>
   </div>
 
-  <div class="question">
+  <div class="question no-border">
     <h3 class="q">Was this FAQ written with AI?</h3>
     <p class="a">Nope. Flesh and fingers and brain and markdown. Ew. Gross. And it’s not a FAQ. These are not frequently asked questions. More like hypothetical objections.</p>
   </div>
 
+    <EarlyAccess class="custom-ea" @banner-message="passthruEvent"/>
   </div>
+
 </template>
 
 <style scoped>
@@ -73,6 +87,7 @@ div.container {
   width: 100%;
   margin: 0 auto 0 auto;
   background-color: #faf8f5;
+  padding-bottom: 4rem;
   div, p {
     max-width: 800px;
     margin: 0 auto 0 auto;
@@ -102,12 +117,19 @@ div.container {
     padding-bottom: 1.25rem;
     margin-bottom: 1.25rem;
   }
+  div.question.no-border {
+    margin-bottom: 3.25rem;
+    border-bottom: none;
+  }
 
   .a.flex {
     display: flex;
     gap: 1rem;
   }
 
+  .custom-ea {
+    margin-bottom: 4rem;
+  }
 }
 
 </style>

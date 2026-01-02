@@ -8,7 +8,7 @@
       <mark>Dealboxxed</mark> scans your Gmail promotions for deals, compiles them into a <b>weekly email digest</b>, and automatically archives everything. Never miss a good deal. Don’t drown in promos.
       </p>
      </div>
-    <EarlyAccess />
+    <EarlyAccess @banner-message="passthruEvent"/>
     <FeatureGrid />
   </v-sheet>
 </template>
@@ -21,7 +21,13 @@ defineProps({
   title: { type: String, required: true },
 })
 
-defineEmits(['button-click'])
+const emit = defineEmits<{
+  'banner-message': [message: string, type: string]
+}>()
+
+const passthruEvent = (message:string, type: string) => { 
+  emit('banner-message', message, type);
+}
 </script>
 
 <style scoped>
