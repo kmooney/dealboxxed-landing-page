@@ -6,7 +6,7 @@
       <v-icon icon="mdi-inbox-outline scan" size="large" color="red"/>
       </div>
       <h4>Smart scanning</h4>
-      <p class="small centered">Uses Gmail's promotional tags to identify and process your promo emails</p>
+      <p class="small centered">Uses Gmail’s promotional tags to identify and process your promo emails</p>
     </div>
 
     <div class="card">

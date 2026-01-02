@@ -55,5 +55,7 @@ defineEmits(['button-click'])
 .hero-header {
   font-size: 3.5rem;
   margin-bottom: 2rem;
+  width: 100%;
+  text-align:center;
 }
 </style>
