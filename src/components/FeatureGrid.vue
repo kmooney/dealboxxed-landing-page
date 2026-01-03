@@ -36,7 +36,7 @@ div.card-container {
   margin-top: 2rem;
 
   @media (max-width:599px) {
-      max-width: 300px;
+      max-width: 85%;
       flex-direction:column;
       grid-template-columns: 1fr;
     }
@@ -51,6 +51,11 @@ div.card {
     background: white;
     margin-bottom: 1.5rem;
     padding: 1.5em;
+
+    @media (max-width:599px) {
+      width: 100%;
+      max-width: none;
+    }
 
     h4 {
       padding: 0;

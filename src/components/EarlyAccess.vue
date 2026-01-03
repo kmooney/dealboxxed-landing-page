@@ -57,7 +57,7 @@
     padding: 1.5em;
     margin:20px;
     @media (max-width:599px) {
-      max-width: 300px;
+      max-width: 85%;
       flex-direction:column;
     }
   }
