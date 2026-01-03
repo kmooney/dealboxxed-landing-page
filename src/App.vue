@@ -1,4 +1,5 @@
 <script setup>
+   import Analytics from '@vercel/analytics'
    import Hero from './components/Hero.vue'
    import FAQ from './components/FAQ.vue'
    import EarlyAccess from './components/EarlyAccess.vue';
@@ -16,6 +17,7 @@
 <template>
 <v-app>
 	<v-main class="main-app">
+    <Analytics/>
     <v-snackbar 
       v-model="showBanner" 
       timeout="1500"
