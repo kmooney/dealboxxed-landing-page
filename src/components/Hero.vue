@@ -31,6 +31,7 @@ const passthruEvent = (message:string, type: string) => {
 </script>
 
 <style scoped>
+
 .hero {
   background: linear-gradient(135deg, hsl(4 70% 55% / .1), hsl(165 55% 45% / .1), hsl(210 70% 50% / .1));
 }
@@ -41,6 +42,7 @@ const passthruEvent = (message:string, type: string) => {
   flex-direction: column;
   justify-content: center;
   width: 100%;
+  padding-bottom: 3rem;
 }
 
 .hero-content {
@@ -63,5 +65,10 @@ const passthruEvent = (message:string, type: string) => {
   margin-bottom: 2rem;
   width: 100%;
   text-align:center;
+  @media (max-width:599px) {
+    font-size:2.5em;
+  }
 }
+
+
 </style>

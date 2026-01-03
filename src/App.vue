@@ -15,7 +15,7 @@
 
 <template>
 <v-app>
-	<v-main>
+	<v-main class="main-app">
     <v-snackbar 
       v-model="showBanner" 
       timeout="1500"
@@ -51,4 +51,5 @@
   color: #3d3d3d;
   font-weight: 500;
 }
+
 </style>

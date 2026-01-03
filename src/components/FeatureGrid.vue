@@ -34,6 +34,13 @@ div.card-container {
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 2rem;
   margin-top: 2rem;
+
+  @media (max-width:599px) {
+      max-width: 300px;
+      flex-direction:column;
+      grid-template-columns: 1fr;
+    }
+
 }
 
 div.card {

@@ -43,6 +43,8 @@
 </template>
 
 <style scoped>
+
+
   div.card {
     display: flex;
     border: 2px dashed red;
@@ -53,6 +55,11 @@
     background: white;
     margin-bottom: 1.5rem;
     padding: 1.5em;
+    margin:20px;
+    @media (max-width:599px) {
+      max-width: 300px;
+      flex-direction:column;
+    }
   }
 
   .white-text-btn :deep() {

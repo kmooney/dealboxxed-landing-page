@@ -130,6 +130,21 @@ div.container {
   .custom-ea {
     margin-bottom: 4rem;
   }
+
+  @media (max-width:599px) {
+    div {
+      max-width: 350px;
+    }
+    .a.flex {
+      img {
+        margin: 0 auto 0 auto;
+        margin-top: 1rem;
+        width: 100%;
+      }
+      flex-direction: column;
+      gap: 0;
+    }
+  }
 }
 
 </style>
