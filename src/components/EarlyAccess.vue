@@ -1,7 +1,8 @@
 <template>
   <div class="card">
-    <div>
-      <h2 class="early-access"><v-icon icon="mdi-email-outline" color="red" size="large" /> Get early access</h2><p class="small">Be the first to know when Dealboxxed is ready.</p></div>
+    <div class="card-head">
+      <h2 class="early-access"><v-icon icon="mdi-email-outline" color="red" size="large" /> Get early access</h2>
+      <p class="small card-sub">Be the first to know when Dealboxxed is ready.</p></div>
     <div>
       <v-form ref="form" class="early-access" @submit.prevent="handleSubmit">
         <v-text-field
@@ -44,7 +45,9 @@
 
 <style scoped>
 
-
+  div.card-head {
+    	margin-bottom: 0.5rem;
+  }
   div.card {
     display: flex;
     border: 2px dashed red;
@@ -56,7 +59,7 @@
     margin-bottom: 1.5rem;
     padding: 1.5em;
     margin:20px;
-    @media (max-width:599px) {
+    @media (max-width:799px) {
       max-width: 85%;
       flex-direction:column;
     }

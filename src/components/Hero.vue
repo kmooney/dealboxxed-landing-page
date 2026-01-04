@@ -65,7 +65,7 @@ const passthruEvent = (message:string, type: string) => {
   margin-bottom: 2rem;
   width: 100%;
   text-align:center;
-  @media (max-width:599px) {
+  @media (max-width:799px) {
     font-size:2.5em;
   }
 }

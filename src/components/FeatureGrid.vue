@@ -1,6 +1,7 @@
 <template>
 
   <div class="card-container">
+
     <div class="card">
       <div class="icon-wrapper scanning">
       <v-icon icon="mdi-inbox-outline scan" size="large" color="red"/>
@@ -34,12 +35,13 @@ div.card-container {
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 2rem;
   margin-top: 2rem;
+  max-width: 85%;
 
-  @media (max-width:599px) {
+  @media (max-width:799px) {
       max-width: 85%;
       flex-direction:column;
       grid-template-columns: 1fr;
-    }
+  }
 
 }
 
@@ -51,10 +53,14 @@ div.card {
     background: white;
     margin-bottom: 1.5rem;
     padding: 1.5em;
-
-    @media (max-width:599px) {
+    
+    @media (max-width:799px) {
       width: 100%;
       max-width: none;
+    }
+
+    @media(max-width: 599px) {
+	flex-direction: column;
     }
 
     h4 {
@@ -64,6 +70,7 @@ div.card {
       text-align: center;
     }
 }
+
 .icon-wrapper {
   width: 50px;
   height: 50px;

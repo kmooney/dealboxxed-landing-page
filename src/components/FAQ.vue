@@ -89,7 +89,6 @@ div.container {
   background-color: #faf8f5;
   padding-bottom: 4rem;
   div, p {
-    max-width: 800px;
     margin: 0 auto 0 auto;
   }
   p.sub, p.sub > b {
@@ -116,7 +115,9 @@ div.container {
     border-bottom: 1px solid rgb(231, 226, 218);
     padding-bottom: 1.25rem;
     margin-bottom: 1.25rem;
+    max-width: 80%;
   }
+
   div.question.no-border {
     margin-bottom: 3.25rem;
     border-bottom: none;
@@ -129,11 +130,12 @@ div.container {
 
   .custom-ea {
     margin-bottom: 4rem;
+    width: 100%;
   }
 
   @media (max-width:599px) {
-    div {
-      max-width: 350px;
+    p.centered.sub {
+      max-width: 90%;
     }
     .a.flex {
       img {
