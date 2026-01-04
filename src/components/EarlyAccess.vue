@@ -19,7 +19,7 @@
 
         <v-text-field
             v-model="emailAddress"
-            label="Your Gmail address"
+            label="Your email address"
             variant="outlined"
             bg-color="white"
             prepend-inner-icon="mdi-email-outline"
@@ -91,7 +91,7 @@ const form = ref<any>(null);
 const isSubmitting = ref(false);
 
 const validateEmail = [
-   (v: string) => !!v || 'Gmail address is required',
+   (v: string) => !!v || 'Email address is required',
    (v: string) => /.+@.+\..+/.test(v) || 'Email must be valid.'
 ]
 
