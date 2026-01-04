@@ -92,7 +92,7 @@ const isSubmitting = ref(false);
 
 const validateEmail = [
    (v: string) => !!v || 'Gmail address is required',
-   (v: string) => /.+@gmail.com/.test(v) || 'Email must be a valid Gmail address.'
+   (v: string) => /.+@.+\..+/.test(v) || 'Email must be valid.'
 ]
 
 const validateName = [
