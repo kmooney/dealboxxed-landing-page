@@ -1,8 +1,5 @@
 <script setup>
    import Analytics from '@vercel/analytics'
-   import Hero from './components/Hero.vue'
-   import FAQ from './components/FAQ.vue'
-   import EarlyAccess from './components/EarlyAccess.vue';
    import { ref } from 'vue';
    const bannerMsg = ref('')
    const showBanner = ref(false)
@@ -11,15 +8,15 @@
     bannerMsg.value = msg
     showBanner.value = true
   }
-   
+
 </script>
 
 <template>
 <v-app>
 	<v-main class="main-app">
     <Analytics/>
-    <v-snackbar 
-      v-model="showBanner" 
+    <v-snackbar
+      v-model="showBanner"
       timeout="1500"
       location="top"
       class="custom-snackbar"
@@ -29,15 +26,7 @@
 
       </v-snackbar>
 
-    <Hero 
-        title="Take control of your inbox" 
-        msg="Dealboxxed scans your Gmail promotions for deals, compiles them into a weekly digest, and automatically archives everything. Never miss a good deal. Never drown in promos."
-        @bannerMessage="handleBannerMessage"
-        
-      />
-    <FAQ 
-        @bannerMessage="handleBannerMessage"
-    />
+    <router-view @banner-message="handleBannerMessage" />
     </v-main>
 </v-app>
 </template>
